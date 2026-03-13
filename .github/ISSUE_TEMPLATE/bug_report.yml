@@ -1,9 +1,34 @@
 name: Bug Report
 description: File a bug report
+title: "[Bug]: "
 labels: ["bug"]
 assignees:
   - rebelinux
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report :)
+        - Kindly **DO NOT** ask for instructions.
+        - Use [Discussions](https://github.com/orgs/AsBuiltReport/discussions) section if you have a query or doubts or any other relevant question.
+        - Read project's [Web Site](https://www.asbuiltreport.com/user-guide/quickstart/) for detailed documentation.
+        - Read project's [FAQs](https://www.asbuiltreport.com/support/faq/) section for Frequently asked questions.
+        - Search for previous [Issues](https://github.com/AsBuiltReport/AsBuiltReport.Veeam.VBR/issues)/[Pull Requests](https://github.com/AsBuiltReport/AsBuiltReport.Veeam.VBR/pulls) if this issue is already reported or fix has been created.
+  - type: dropdown
+    id: vbrversion
+    attributes:
+      label: Veeam Backup & Replication version
+      options:
+        - vNEXT
+        - 12.3
+        - 12.2
+        - 12.1
+        - 12
+        - 11
+        - 10
+        - 9.5
+    validations:
+      required: true
   - type: textarea
     id: bug-description
     attributes:
@@ -90,8 +115,8 @@ body:
             I have read and followed the [bug reporting guidelines](https://www.asbuiltreport.com/about/contributing/#reporting-issues-and-bugs).
           required: true
         - label: >-
-            I have read [the documentation](https://www.asbuiltreport.com/user-guide/new-asbuiltconfig),
-            and referred to the [known issues](https://www.asbuiltreport.com/user-guide/known-issues/) before submitting this bug report.
+            I have read [the documentation](https://www.asbuiltreport.com/user-guide/new-asbuiltreport),
+            and referred to the [known issues](https://www.asbuiltreport.com/support/known-issues/) before submitting this bug report.
           required: true
         - label: >-
             I have checked for previously opened & closed [issues](https://github.com/AsBuiltReport/AsBuiltReport.Veeam.VBR/issues) before submitting this bug report.
